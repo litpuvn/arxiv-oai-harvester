@@ -1,0 +1,24 @@
+package arxiv.exception;
+
+/**
+ * Error thrown when the harvester encounters some kind of unrecoverable internal fault.
+ */
+public class HarvesterError extends ArxivError {
+
+    public HarvesterError() {
+        super();
+    }
+
+    public HarvesterError(String message) {
+        super(message);
+    }
+
+    public HarvesterError(Throwable cause) {
+        super(cause);
+    }
+
+    public HarvesterError(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+}
