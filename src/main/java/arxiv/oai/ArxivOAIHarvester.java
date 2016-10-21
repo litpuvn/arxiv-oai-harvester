@@ -29,17 +29,22 @@ public class ArxivOAIHarvester {
     /**
      *
      * @param fromDate
-     * @return number of records
+     * @return
+     * @throws UniformInterfaceException
+     * @throws BadArgumentException
      */
     public ParsedXmlResponse listRecords(Date fromDate) throws UniformInterfaceException, BadArgumentException {
         return this.listRecords(fromDate, null);
     }
 
     /**
+     * Do list repository records with a certain date range
      *
      * @param fromDate
      * @param toDate
      * @return
+     * @throws UniformInterfaceException
+     * @throws BadArgumentException
      */
     public ParsedXmlResponse listRecords(Date fromDate, Date toDate) throws UniformInterfaceException, BadArgumentException {
         if (fromDate == null) {
