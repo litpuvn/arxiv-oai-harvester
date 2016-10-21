@@ -40,12 +40,14 @@ public class Cli {
                 untilDate = df.parse(cmd.getOptionValue("u", df.format(today)));
             }
 
+            log.info("Harvesting...");
+
             ArxivOAIHarvester harvester = new ArxivOAIHarvester();
             ParsedXmlResponse response = harvester.listRecords(fromDate, untilDate);
 
             log.info("Found: " + response.getRecords().size() + " records");
         }
-        catch (ParseException pe) {
+        catch (org.apache.commons.cli.ParseException pe) {
             pe.printStackTrace();
             log.warning("Invalid command line options");
         }
