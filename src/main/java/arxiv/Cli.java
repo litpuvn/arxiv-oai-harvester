@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
+import arxiv.exception.BadArgumentException;
 import arxiv.oai.ArxivOAIHarvester;
 import arxiv.xml.ParsedXmlResponse;
 import org.apache.commons.cli.*;
@@ -36,11 +37,7 @@ public class Cli {
 
             fromDate = df.parse(cmd.getOptionValue("f", df.format(today)));
             if (cmd.hasOption("u")) {
-                untilDate = df.parse(cmd.getOptionValue("f", df.format(today)));
-                if (fromDate.after(untilDate)) {
-                    System.err.printf("Expect fromDate less than or equal to untilDate");
-                    return;
-                }
+                untilDate = df.parse(cmd.getOptionValue("u", df.format(today)));
             }
 
             ArxivOAIHarvester harvester = new ArxivOAIHarvester();
@@ -55,10 +52,12 @@ public class Cli {
         catch (java.text.ParseException jpe) {
             log.warning("Invalid fromDate or untilDate inputs");
         }
+        catch (BadArgumentException be) {
+            log.severe(be.getMessage());
+        }
         catch (Exception e) {
+            log.severe("Some errors occur. The error was:");
             e.printStackTrace();
-
-            log.severe("Some error occurs. Please try again latter");
         }
     }
 
