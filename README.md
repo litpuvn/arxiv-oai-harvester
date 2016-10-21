@@ -4,6 +4,15 @@ Usage
 -----
 Jar file is targeted Java 8
 
+To build jar. Clone the source code, and install maven
+http://maven.apache.org/install.html
+
+The run package
+```
+mvn package
+```
+
+
 Execute the jar file with options -f for from date (the date that the harvester will get records until now)
 or/and -u for until date.
 
