@@ -29,7 +29,7 @@ public class ArxivOAIHarvester {
     /**
      *
      * @param fromDate
-     * @return
+     * @return ParsedXmlResponse
      * @throws UniformInterfaceException
      * @throws BadArgumentException
      */
@@ -42,7 +42,7 @@ public class ArxivOAIHarvester {
      *
      * @param fromDate
      * @param toDate
-     * @return
+     * @return ParsedXmlResponse
      * @throws UniformInterfaceException
      * @throws BadArgumentException
      */
