@@ -7,7 +7,7 @@ import java.time.ZonedDateTime;
 /**
  * Implementations of this interface represent a response from the arXiv OAI repository.
  */
-public interface ArxivResponse {
+public interface ArxivResponseInterface {
 
     /**
      * Get the response datetime

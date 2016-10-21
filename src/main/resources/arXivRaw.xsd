@@ -28,8 +28,8 @@ if that format changes. See http://arxiv.org/help/oa .
   <element name="comments" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="proxy" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="report-no" minOccurs="0" maxOccurs="1" type="string"/>
-  <element name="acm-class" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="msc-class" minOccurs="0" maxOccurs="1" type="string"/>
+  <element name="acm-class" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="journal-ref" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="doi" minOccurs="0" maxOccurs="1" type="string"/>
   <element name="license" minOccurs="0" maxOccurs="1" type="anyURI"/>

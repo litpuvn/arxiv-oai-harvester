@@ -17,7 +17,7 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 
 @Value
 @Builder
-public class ListRecordsResponse implements ArxivResponse {
+public class ListRecordsResponse implements ArxivResponseInterface {
 
     /**
      * Response datetime.

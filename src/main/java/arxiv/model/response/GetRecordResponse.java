@@ -10,7 +10,7 @@ import java.time.ZonedDateTime;
 
 @Value
 @Builder
-public class GetRecordResponse implements ArxivResponse {
+public class GetRecordResponse implements ArxivResponseInterface {
 
     /**
      * Response datetime.
