@@ -58,6 +58,8 @@ public class ArxivOAIHarvester {
                 .queryParam("metadataPrefix", METADATA_PREFIX_RAW)
         ;
 
+        log.info("Querying repository: " + service.getURI());
+
         if (toDate != null) {
             if (fromDate.after(toDate)) {
                 throw new BadArgumentException("fromDate must be less than or equal to untilDate");
