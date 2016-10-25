@@ -7,7 +7,7 @@ Jar file is targeted Java 8
 To build jar. Clone the source code, and install maven
 http://maven.apache.org/install.html
 
-The run package
+Then run package
 ```
 mvn package
 ```
