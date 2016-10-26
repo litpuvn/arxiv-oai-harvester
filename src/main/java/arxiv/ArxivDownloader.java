@@ -66,6 +66,7 @@ public class ArxivDownloader {
                         default:
                             log.severe("Server error. The error was:");
                             ue.printStackTrace();
+                            return;
                     }
                 }
             }
