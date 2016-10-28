@@ -44,7 +44,7 @@ public class ArxivDownloader {
                     totalRecords += response.getRecords().size();
 
                     log.info("Found: " + response.getRecords().size() + " records");
-                    log.info("Total list size: " + response.getCompleteListSize().toString());
+                    log.info("Total list size: " + response.getCompleteListSize());
                     log.info("resumption token is: " + resumptionToken);
 
                     if (resumptionToken != null && resumptionToken.length() > 0) {
@@ -73,7 +73,6 @@ public class ArxivDownloader {
             while(resumptionToken != null && resumptionToken.length() > 0);
 
             log.info("Total Parsed Records: " + totalRecords);
-
         }
         catch (BadArgumentException be) {
             log.severe(be.getMessage());
