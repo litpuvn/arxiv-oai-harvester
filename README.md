@@ -17,7 +17,7 @@ Execute the jar file with options -f for from date (the date that the harvester 
 or/and -u for until date.
 
 ```
-java -jar arxiv.jar -u="2016-10-20"
+java -jar arxiv.jar -f "2016-10-15" -u "2016-10-20"
 ```
 
 To read about arxiv oai
